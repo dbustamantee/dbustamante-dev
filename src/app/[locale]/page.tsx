@@ -23,7 +23,7 @@ export default async function HomePage({
     <>
       <JsonLd locale={locale} />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero profile={content.profile} />
         <About bio={content.profile.bio} />
         <Experience items={content.experience} />

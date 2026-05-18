@@ -1,53 +1,108 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
+
+const sections = [
+  { key: "about", href: "#about" },
+  { key: "experience", href: "#experience" },
+  { key: "projects", href: "#projects" },
+  { key: "skills", href: "#skills" },
+  { key: "contact", href: "#contact" },
+] as const;
 
 export function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const router = useRouter();
-
-  const sections = [
-    { key: "about", href: "#about" },
-    { key: "experience", href: "#experience" },
-    { key: "projects", href: "#projects" },
-    { key: "skills", href: "#skills" },
-    { key: "contact", href: "#contact" },
-  ] as const;
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   function switchLocale(locale: "en" | "es") {
-    router.replace(pathname, { locale });
+    router.replace(pathname + window.location.hash, { locale });
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg)]/95 backdrop-blur-sm">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-[var(--color-accent-blue)] focus:px-4 focus:py-2 focus:text-white">
+    <header className="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-sm">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent-blue focus:px-4 focus:py-2 focus:text-white"
+      >
         Skip to content
       </a>
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-semibold">
+        <a href="#" className="font-heading text-lg font-semibold tracking-tight">
           DB
         </a>
+
+        {/* Desktop nav */}
         <ul className="hidden items-center gap-6 text-sm md:flex">
           {sections.map(({ key, href }) => (
             <li key={key}>
-              <a href={href} className="transition-colors hover:text-[var(--color-accent-blue)]">
+              <a
+                href={href}
+                className="text-ink-muted transition-colors hover:text-accent-blue"
+              >
                 {t(key)}
               </a>
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-2 text-sm">
-          <button onClick={() => switchLocale("en")} className="rounded px-2 py-1 hover:bg-[var(--color-border)]">
-            EN
-          </button>
-          <span className="text-[var(--color-ink-muted)]">/</span>
-          <button onClick={() => switchLocale("es")} className="rounded px-2 py-1 hover:bg-[var(--color-border)]">
-            ES
+
+        <div className="flex items-center gap-3">
+          {/* Language switcher */}
+          <div className="flex items-center gap-1 text-sm">
+            <button
+              onClick={() => switchLocale("en")}
+              className="rounded px-2 py-1 text-ink-muted transition-colors hover:bg-border hover:text-ink"
+            >
+              EN
+            </button>
+            <span className="text-ink-subtle">/</span>
+            <button
+              onClick={() => switchLocale("es")}
+              className="rounded px-2 py-1 text-ink-muted transition-colors hover:bg-border hover:text-ink"
+            >
+              ES
+            </button>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-ink-muted transition-colors hover:bg-border md:hidden"
+            aria-expanded={mobileOpen}
+            aria-label="Toggle menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+              {mobileOpen ? (
+                <path d="M5 5l10 10M15 5L5 15" />
+              ) : (
+                <path d="M3 5h14M3 10h14M3 15h14" />
+              )}
+            </svg>
           </button>
         </div>
       </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="border-t border-border px-6 pb-4 md:hidden">
+          <ul className="flex flex-col gap-1 pt-2">
+            {sections.map(({ key, href }) => (
+              <li key={key}>
+                <a
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block rounded-lg px-3 py-2 text-sm text-ink-muted transition-colors hover:bg-border hover:text-ink"
+                >
+                  {t(key)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }

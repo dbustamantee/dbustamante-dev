@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   --color-bg: #fafaf9;
+  --color-surface: #ffffff;
   --color-ink: #1c1917;
   --color-ink-muted: #57534e;
-  --color-accent-blue: #2563eb;
-  --color-accent-coral: #e85d4a;
-  --color-accent-green: #16a34a;
+  --color-ink-subtle: #a8a29e;
   --color-border: #e7e5e4;
+  --color-border-hover: #d6d3d1;
+  --color-accent-blue: #2563eb;
+  --color-accent-blue-hover: #1d4ed8;
+  --color-accent-coral: #e85d4a;
+  --color-accent-green: #059669;
   --font-heading: var(--font-fraunces);
   --font-body: var(--font-ibm-plex-sans);
 }
@@ -26,6 +30,13 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading), serif;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 @media print {
