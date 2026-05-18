@@ -24,6 +24,7 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -37,6 +38,21 @@ h3 {
   outline: 2px solid var(--color-accent-blue);
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* Dark mode */
+.dark {
+  --color-bg: #0c0a09;
+  --color-surface: #1c1917;
+  --color-ink: #fafaf9;
+  --color-ink-muted: #a8a29e;
+  --color-ink-subtle: #78716c;
+  --color-border: #292524;
+  --color-border-hover: #44403c;
+  --color-accent-blue: #3b82f6;
+  --color-accent-blue-hover: #60a5fa;
+  --color-accent-coral: #f97316;
+  --color-accent-green: #10b981;
 }
 
 @media print {

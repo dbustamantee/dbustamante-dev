@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { useThemeToggle } from "@/hooks/useTheme";
 
 const sections = [
   { key: "about", href: "#about" },
@@ -19,6 +20,7 @@ export function Header() {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const activeSection = useActiveSection();
+  const toggleTheme = useThemeToggle();
 
   function switchLocale(locale: "en" | "es") {
     router.replace(pathname + window.location.hash, { locale });
@@ -52,6 +54,18 @@ export function Header() {
         </ul>
 
         <div className="flex items-center gap-3">
+          {/* Theme toggle */}
+          <button
+            onClick={toggleTheme}
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-ink-muted transition-colors hover:bg-border"
+            aria-label="Toggle theme"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+          </button>
+
           {/* Language switcher */}
           <div className="flex items-center gap-1 text-sm">
             <button
