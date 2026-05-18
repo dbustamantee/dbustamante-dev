@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Diego Bustamante — Desarrollador Fullstack",
+    "description": "Desarrollador Fullstack Senior especializado en plataformas IoT, arquitecturas serverless y aplicaciones web modernas. +10 años construyendo sistemas escalables en AWS."
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "headline": "Diego Bustamante",
+    "subheadline": "Desarrollador Fullstack Senior construyendo plataformas IoT y aplicaciones web modernas en AWS",
+    "cta": "Contactar"
+  },
+  "about": {
+    "title": "Sobre mí"
+  },
+  "experience": {
+    "title": "Experiencia"
+  },
+  "projects": {
+    "title": "Proyectos"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Abierto a roles senior/staff fullstack con equipos internacionales. Canales preferidos:",
+    "print": "Imprimir CV"
+  },
+  "footer": {
+    "copyright": "© {year} Diego Bustamante"
+  }
+}

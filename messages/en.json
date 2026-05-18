@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Diego Bustamante — Fullstack Developer",
+    "description": "Senior Fullstack Developer specializing in IoT platforms, serverless architectures, and modern web applications. 10+ years building scalable systems on AWS."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Diego Bustamante",
+    "subheadline": "Senior Fullstack Developer building IoT platforms and modern web applications on AWS",
+    "cta": "Get in touch"
+  },
+  "about": {
+    "title": "About"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Open to senior/staff fullstack roles with international teams. Preferred channels:",
+    "print": "Print CV"
+  },
+  "footer": {
+    "copyright": "© {year} Diego Bustamante"
+  }
+}
