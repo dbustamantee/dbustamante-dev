@@ -6,7 +6,7 @@ export function Hero({ profile }: { profile: Profile }) {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative mx-auto flex min-h-[80vh] max-w-6xl flex-col items-center justify-center gap-8 px-6 py-20 md:flex-row md:gap-16 md:py-32">
+    <section className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-0 px-6 py-20 md:flex-row md:gap-0 md:py-32">
       {/* Text content */}
       <div className="z-10 flex-1 text-center md:text-left">
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent-blue">
@@ -37,19 +37,16 @@ export function Hero({ profile }: { profile: Profile }) {
       </div>
 
       {/* Profile photo */}
-      <div className="relative z-10 shrink-0">
-        <div className="relative h-72 w-72 overflow-hidden rounded-2xl shadow-2xl ring-4 ring-surface-alt/50 sm:h-80 sm:w-80 md:h-96 md:w-96">
-          <Image
-            src="/diego-bustamante.jpg"
-            alt={profile.name}
-            fill
-            className="object-cover object-top"
-            priority
-            sizes="(max-width: 640px) 288px, (max-width: 768px) 320px, 384px"
-          />
-        </div>
-        {/* Decorative element */}
-        <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-accent-blue/10" />
+      <div className="relative z-10 md:-ml-12">
+        <Image
+          src="/diego-bustamante.png"
+          alt={profile.name}
+          width={700}
+          height={875}
+          className="h-auto w-[280px] drop-shadow-2xl sm:w-[360px] md:w-[480px] lg:w-[560px] xl:w-[640px]"
+          priority
+          sizes="(max-width: 640px) 280px, (max-width: 768px) 360px, (max-width: 1024px) 480px, (max-width: 1280px) 560px, 640px"
+        />
       </div>
     </section>
   );
