@@ -30,12 +30,20 @@ function checkArrayParity(name: string, enArr: { id: string }[], esArr: { id: st
   });
 }
 
-// Check messages keys
-function checkMessageKeys() {
-  const enKeys = Object.keys(enMessages).sort();
-  const esKeys = Object.keys(esMessages).sort();
+// Check messages keys (deep)
+function checkMessageKeys(enObj: object, esObj: object, path = "messages") {
+  const enKeys = Object.keys(enObj).sort();
+  const esKeys = Object.keys(esObj).sort();
   if (JSON.stringify(enKeys) !== JSON.stringify(esKeys)) {
-    error(`messages: different top-level keys (en: [${enKeys}], es: [${esKeys}])`);
+    error(`${path}: key mismatch (en: [${enKeys}], es: [${esKeys}])`);
+    return;
+  }
+  for (const key of enKeys) {
+    const enVal = (enObj as Record<string, unknown>)[key];
+    const esVal = (esObj as Record<string, unknown>)[key];
+    if (typeof enVal === "object" && enVal !== null && typeof esVal === "object" && esVal !== null) {
+      checkMessageKeys(enVal as object, esVal as object, `${path}.${key}`);
+    }
   }
 }
 
@@ -62,15 +70,48 @@ function findTodos(obj: unknown, path: string) {
   }
 }
 
+// Validate URLs
+function findUrls(obj: unknown, path: string) {
+  if (typeof obj === "string" && (obj.startsWith("http://") || obj.startsWith("https://"))) {
+    if (obj.includes("TODO")) return; // skip TODOs, handled separately
+    try {
+      new URL(obj);
+    } catch {
+      error(`${path}: invalid URL "${obj}"`);
+    }
+  } else if (Array.isArray(obj)) {
+    obj.forEach((item, i) => findUrls(item, `${path}[${i}]`));
+  } else if (obj && typeof obj === "object") {
+    for (const [key, value] of Object.entries(obj)) {
+      findUrls(value, `${path}.${key}`);
+    }
+  }
+}
+
+// Check nav anchors exist as section IDs in page
+const NAV_SECTIONS = ["about", "experience", "projects", "skills", "education", "contact"];
+function checkAnchors() {
+  const enKeys = Object.keys((enMessages as Record<string, unknown>).nav || {});
+  for (const key of enKeys) {
+    if (!NAV_SECTIONS.includes(key)) {
+      warn(`nav.${key}: no matching section ID in page`);
+    }
+  }
+}
+
 // Run checks
 checkArrayParity("experience", en.experience, es.experience);
 checkArrayParity("projects", en.projects, es.projects);
 checkArrayParity("skills", en.skills, es.skills);
-checkMessageKeys();
+checkArrayParity("education", en.education, es.education);
+checkMessageKeys(enMessages, esMessages);
 checkNotEmpty(en.profile.contact, "en.profile.contact");
 checkNotEmpty(es.profile.contact, "es.profile.contact");
 findTodos(en, "en");
 findTodos(es, "es");
+findUrls(en, "en");
+findUrls(es, "es");
+checkAnchors();
 
 // Summary
 console.log(`\n${errors} errors, ${warnings} warnings`);

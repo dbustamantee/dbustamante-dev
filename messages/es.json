@@ -27,6 +27,9 @@
   "skills": {
     "title": "Habilidades"
   },
+  "education": {
+    "title": "Educación y Certificaciones"
+  },
   "contact": {
     "title": "Contacto",
     "description": "Abierto a roles senior/staff fullstack con equipos internacionales. Canales preferidos:",

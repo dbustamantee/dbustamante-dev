@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
+import { Education } from "@/components/Education";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
@@ -29,6 +30,7 @@ export default async function HomePage({
         <Experience items={content.experience} />
         <Projects items={content.projects} />
         <Skills groups={content.skills} />
+        <Education items={content.education} />
         <Contact contact={content.profile.contact} />
       </main>
       <Footer lastUpdated={content.lastUpdated} />

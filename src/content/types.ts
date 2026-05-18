@@ -40,10 +40,21 @@ export interface SkillGroup {
   items: string[];
 }
 
+export interface EducationItem {
+  id: string;
+  institution: string;
+  degree: string;
+  field?: string;
+  startYear: string;
+  endYear?: string;
+  periodLabel: string;
+}
+
 export interface SiteContent {
   profile: Profile;
   experience: ExperienceItem[];
   projects: ProjectItem[];
   skills: SkillGroup[];
+  education: EducationItem[];
   lastUpdated: string;
 }

@@ -131,6 +131,24 @@ const content: SiteContent = {
       items: ["Git", "CI/CD", "Docker", "WildFly", "Serverless", "IoT Protocols"],
     },
   ],
+  education: [
+    {
+      id: "aws-dev",
+      institution: "Amazon Web Services",
+      degree: "AWS Certified Developer – Associate",
+      startYear: "2023",
+      periodLabel: "2023 (expiring soon)",
+    },
+    {
+      id: "university",
+      institution: "TODO: University name",
+      degree: "TODO: Degree",
+      field: "TODO: Field",
+      startYear: "TODO",
+      endYear: "TODO",
+      periodLabel: "TODO",
+    },
+  ],
   lastUpdated: "2026-05-18",
 };
 

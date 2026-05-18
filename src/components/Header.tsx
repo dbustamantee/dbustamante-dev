@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 const sections = [
   { key: "about", href: "#about" },
@@ -17,6 +18,7 @@ export function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const activeSection = useActiveSection();
 
   function switchLocale(locale: "en" | "es") {
     router.replace(pathname + window.location.hash, { locale });
@@ -35,13 +37,13 @@ export function Header() {
           DB
         </a>
 
-        {/* Desktop nav */}
         <ul className="hidden items-center gap-6 text-sm md:flex">
           {sections.map(({ key, href }) => (
             <li key={key}>
               <a
                 href={href}
-                className="text-ink-muted transition-colors hover:text-accent-blue"
+                aria-current={activeSection === key ? "true" : undefined}
+                className={`transition-colors hover:text-accent-blue ${activeSection === key ? "font-medium text-accent-blue" : "text-ink-muted"}`}
               >
                 {t(key)}
               </a>
