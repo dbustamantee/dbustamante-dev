@@ -26,7 +26,7 @@ export default async function HomePage({
       <Header />
       <main id="main-content">
         <Hero profile={content.profile} />
-        <About bio={content.profile.bio} />
+        <About bio={content.profile.bio} stats={content.profile.stats} />
         <Experience items={content.experience} />
         <Projects items={content.projects} />
         <Skills groups={content.skills} />

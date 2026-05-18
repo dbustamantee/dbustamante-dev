@@ -10,6 +10,12 @@ const content: SiteContent = {
       email: "diego.bustamante.work@gmail.com",
       github: "https://github.com/dbustamantee",
     },
+    stats: [
+      { value: "10+", label: "Años de Experiencia" },
+      { value: "50+", label: "Proyectos Entregados" },
+      { value: "15+", label: "Tecnologías" },
+      { value: "3", label: "Países Atendidos" },
+    ],
   },
   experience: [
     {

@@ -9,6 +9,7 @@ export interface Profile {
   title: string;
   bio: string;
   contact: ContactLinks;
+  stats?: { value: string; label: string }[];
 }
 
 export interface ExperienceItem {
