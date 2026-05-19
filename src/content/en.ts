@@ -100,7 +100,6 @@ const content: SiteContent = {
       stack: ["React", "Vite", "TypeScript", "PrimeReact", "i18next"],
       role: "Solo developer",
       url: "https://fonoapp-hosting-423927628379.s3.amazonaws.com/index.html",
-      repo: "https://github.com/Hiruzencio/fonoapp",
     },
     {
       id: "easy-account",
