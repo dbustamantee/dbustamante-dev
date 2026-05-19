@@ -122,7 +122,6 @@ const content: SiteContent = {
       stack: ["Next.js 16", "TypeScript", "Tailwind 4", "next-intl", "Vercel"],
       role: "Solo developer",
       url: "https://diegobustamante.dev",
-      repo: "https://github.com/dbustamantee/diegobustamante-dev",
     },
   ],
   skills: [
