@@ -27,7 +27,7 @@ export default function CVPage({
             <img
               src="/diego-bustamante.png"
               alt={content.profile.name}
-              className="h-24 w-24 rounded-full border-2 border-white/20 object-cover object-[center_20%]"
+              className="h-24 w-24 rounded-full border-2 border-white/20 object-cover object-[center_30%]"
             />
           </div>
 
