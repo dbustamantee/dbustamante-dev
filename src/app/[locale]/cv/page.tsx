@@ -153,9 +153,10 @@ export default function CVPage({
         @media print {
           @page { margin: 0; size: A4; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
-          html, body { margin: 0; padding: 0; }
+          html, body { margin: 0; padding: 0; width: 210mm; height: 297mm; }
           .no-print { display: none !important; }
-          .cv-container { width: 210mm; height: 297mm; box-shadow: none; }
+          .cv-container { width: 210mm !important; height: 297mm !important; box-shadow: none !important; overflow: visible !important; }
+          .cv-container img { visibility: visible !important; display: block !important; -webkit-print-color-adjust: exact !important; }
         }
         @media screen {
           body { background: #f1f5f9; padding: 2rem 0; }

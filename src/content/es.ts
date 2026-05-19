@@ -115,7 +115,7 @@ const content: SiteContent = {
     },
     {
       id: "portfolio",
-      name: "dbustamante.dev",
+      name: "diegobustamante.dev",
       problem: "Sin presencia profesional pública más allá de LinkedIn.",
       solution:
         "Portfolio estático bilingüe optimizado para reclutadores: rápido, accesible, SEO-ready. Construido con desarrollo AI spec-driven.",
