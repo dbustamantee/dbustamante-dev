@@ -19,7 +19,7 @@ export default function CVPage({
 
   return (
     <>
-      <div className="cv-container mx-auto grid min-h-[297mm] w-[210mm] grid-cols-[65mm_1fr] bg-white text-[11px] leading-[1.4] text-gray-800 shadow-2xl">
+      <div className="cv-container mx-auto grid min-h-[279.4mm] w-[215.9mm] grid-cols-[65mm_1fr] bg-white text-[11px] leading-[1.4] text-gray-800 shadow-2xl">
         {/* Sidebar */}
         <aside className="flex flex-col bg-[#1e293b] px-5 py-6 text-white">
           {/* Photo */}
@@ -151,11 +151,11 @@ export default function CVPage({
 
       <style>{`
         @media print {
-          @page { margin: 0; size: 210mm 297mm; }
+          @page { margin: 0; size: letter; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
-          html, body { margin: 0 !important; padding: 0 !important; width: 210mm; }
+          html, body { margin: 0 !important; padding: 0 !important; width: 215.9mm; }
           .no-print { display: none !important; }
-          .cv-container { margin: 0 !important; padding: 0 !important; width: 210mm !important; min-height: 297mm !important; box-shadow: none !important; border: none !important; display: grid !important; grid-template-columns: 65mm 1fr !important; }
+          .cv-container { margin: 0 !important; padding: 0 !important; width: 215.9mm !important; min-height: 279.4mm !important; box-shadow: none !important; border: none !important; display: grid !important; grid-template-columns: 65mm 1fr !important; }
           .cv-container img { visibility: visible !important; display: block !important; border-radius: 50% !important; }
         }
         @media screen {
