@@ -35,7 +35,7 @@ const COMMANDS: Record<string, string[]> = {
   projects: [
     "FonoApp        — speech therapy scoring tool",
     "Easy Account   — personal finance tracker",
-    "dbustamante.dev — this site (Next.js 16 + Tailwind 4)",
+    "diegobustamante.dev — this site (Next.js 16 + Tailwind 4)",
   ],
   contact: [
     "Email:    diego.bustamante.work@gmail.com",
