@@ -130,27 +130,27 @@ const content: SiteContent = {
     {
       id: "frontend",
       category: "Frontend & Product",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "React Native", "PrimeFaces"],
+      items: ["React / Next.js / TypeScript", "Tailwind CSS / React Native / PrimeFaces"],
     },
     {
       id: "backend",
       category: "Backend & Data",
-      items: ["Node.js", "Java", "Spring Boot", "Hibernate", "PostgreSQL", "REST APIs"],
+      items: ["Node.js / Java / Spring Boot", "PostgreSQL / Hibernate / REST APIs"],
     },
     {
       id: "cloud",
       category: "Cloud & Infrastructure",
-      items: ["AWS Lambda", "API Gateway", "ECS", "EC2", "S3", "CDK", "Cognito", "SQS", "Aurora"],
+      items: ["AWS Lambda / CDK / API Gateway", "ECS / EC2 / S3 / SQS / Cognito / Aurora"],
     },
     {
       id: "iot",
       category: "IoT & Protocols",
-      items: ["Device Communication", "Radio Detection", "Flow Meters", "DynamoDB", "MQTT", "Field Networks"],
+      items: ["MQTT / DynamoDB / Device Communication", "Radio Detection / Flow Meters / Field Networks"],
     },
     {
       id: "tooling",
       category: "Tooling & Practices",
-      items: ["Git", "CI/CD", "Docker", "Serverless", "Spec-Driven AI Dev (Kiro, Codex)"],
+      items: ["Git / Docker / CI-CD / Serverless", "VS Code / Warp / DBeaver / Kiro / Codex"],
     },
   ],
   education: [
