@@ -4,23 +4,22 @@ import { setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Fraunces, IBM_Plex_Sans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
 import "../globals.css";
 
-const fraunces = Fraunces({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-geist",
   display: "swap",
 });
 
-const ibmPlexSans = IBM_Plex_Sans({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-ibm-plex-sans",
+  variable: "--font-geist-mono",
   display: "swap",
 });
 
@@ -81,7 +80,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${ibmPlexSans.variable}`} suppressHydrationWarning>
+    <html lang={locale} className={`${geist.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head>
         <Script id="theme-init" strategy="beforeInteractive">{`
           (function() {

@@ -108,9 +108,10 @@ const content: SiteContent = {
         "Needed a simple, bilingual personal finance tracker without the complexity of existing apps.",
       solution:
         "Next.js app with i18n support, clean UI, and PostgreSQL backend with business logic in PLpgSQL.",
-      result: "Personal use, actively maintained",
+      result: "Active personal use — the link is a demo with fictional data (the real app manages my finances)",
       stack: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL", "next-intl"],
       role: "Solo developer",
+      url: "https://easy-account-demo.vercel.app",
     },
     {
       id: "portfolio",
