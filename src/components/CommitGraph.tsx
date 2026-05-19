@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // Simulated weekly commit data inspired by real contribution patterns (3 years, ~156 weeks)
-const WEEKS = 52;
+const WEEKS = 40;
 const DAYS = 7;
 
 function generateCommitData(): number[][] {
@@ -53,7 +53,7 @@ export function CommitGraph() {
               {week.map((level, di) => (
                 <span
                   key={di}
-                  className={`block h-[9px] w-[9px] rounded-sm transition-all duration-500 ${COLORS[level]} ${animated ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+                  className={`block h-2 w-2 rounded-sm transition-all duration-500 ${COLORS[level]} ${animated ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
                   style={{ transitionDelay: `${(wi * 7 + di) * 2}ms` }}
                 />
               ))}
