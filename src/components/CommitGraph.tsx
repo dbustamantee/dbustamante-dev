@@ -45,8 +45,11 @@ export function CommitGraph() {
   if (!data) return null;
 
   return (
-    <div className="overflow-hidden rounded-lg border border-border bg-[#0d1117] p-4 shadow-xl">
-      <div className="overflow-x-auto">
+    <div className="overflow-hidden rounded-lg border border-border bg-[#0d1117] shadow-xl">
+      <div className="border-b border-white/10 px-4 py-2">
+        <span className="text-xs font-medium text-gray-400">Setup Platform — 1,889 contributions</span>
+      </div>
+      <div className="overflow-x-auto p-4">
         <div className="flex gap-[2px]">
           {data.map((week, wi) => (
             <div key={wi} className="flex flex-col gap-[2px]">
@@ -61,15 +64,12 @@ export function CommitGraph() {
           ))}
         </div>
       </div>
-      <div className="mt-3 flex items-center justify-between">
-        <span className="text-[10px] text-gray-500">Setup Platform — 1,889 contributions</span>
-        <div className="flex items-center gap-1 text-[10px] text-gray-500">
-          <span>Less</span>
-          {COLORS.map((c, i) => (
-            <span key={i} className={`inline-block h-[10px] w-[10px] rounded-sm ${c}`} />
-          ))}
-          <span>More</span>
-        </div>
+      <div className="flex items-center justify-end gap-1 px-4 pb-3 text-[10px] text-gray-500">
+        <span>Less</span>
+        {COLORS.map((c, i) => (
+          <span key={i} className={`inline-block h-[10px] w-[10px] rounded-sm ${c}`} />
+        ))}
+        <span>More</span>
       </div>
     </div>
   );
