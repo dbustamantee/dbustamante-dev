@@ -51,8 +51,7 @@ const content: SiteContent = {
       company: "Wiseconn",
       role: "Contributor — PumaServer (Módulo Protocolo IoT)",
       startDate: "2025-08",
-      endDate: "2025-10",
-      periodLabel: "Ago – Oct 2025",
+      periodLabel: "Ago 2025 – Presente",
       description:
         "Módulo core de comunicación IoT manejando interacciones a nivel de protocolo con 20.000+ dispositivos de campo.",
       achievements: [
