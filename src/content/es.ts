@@ -122,7 +122,7 @@ const content: SiteContent = {
       result: "Este sitio — construido en días, no semanas",
       stack: ["Next.js 16", "TypeScript", "Tailwind 4", "next-intl", "Vercel"],
       role: "Desarrollador único",
-      url: "https://dbustamante.dev",
+      url: "https://diegobustamante.dev",
       repo: "https://github.com/dbustamantee/dbustamante-dev",
     },
   ],

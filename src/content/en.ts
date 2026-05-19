@@ -122,7 +122,7 @@ const content: SiteContent = {
       result: "This site — built in days, not weeks",
       stack: ["Next.js 16", "TypeScript", "Tailwind 4", "next-intl", "Vercel"],
       role: "Solo developer",
-      url: "https://dbustamante.dev",
+      url: "https://diegobustamante.dev",
       repo: "https://github.com/dbustamantee/dbustamante-dev",
     },
   ],
