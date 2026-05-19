@@ -12,7 +12,7 @@ const content: SiteContent = {
     },
     stats: [
       { value: "10+", label: "Years in Industry" },
-      { value: "1,889", label: "Commits (Lead Project)" },
+      { value: "3,000+", label: "Commits (Lead Project)" },
       { value: "300K+", label: "Hectares Managed" },
       { value: "20K", label: "IoT Nodes Deployed" },
     ],
@@ -22,12 +22,12 @@ const content: SiteContent = {
       id: "wiseconn-setup",
       company: "Wiseconn",
       role: "Creator & Lead Developer — Setup Platform",
-      startDate: "2017",
-      periodLabel: "2017 – Present",
+      startDate: "2017-03",
+      periodLabel: "Mar 2017 – Present",
       description:
         "Internal tool for configuring IoT network parameters, used daily by 20-30 support engineers across Chile, USA, and Mexico.",
       achievements: [
-        "Built and maintained the entire platform as sole developer (1,889 commits over 3 years)",
+        "Built and maintained the entire platform as sole developer (3,000+ commits over 8 years)",
         "Replaced manual one-by-one device configuration with a guided wizard, reducing setup time by 80%",
         "Architected backend services with Node.js Lambda + SQS for async device operations",
       ],

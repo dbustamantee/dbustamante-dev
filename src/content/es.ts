@@ -12,7 +12,7 @@ const content: SiteContent = {
     },
     stats: [
       { value: "10+", label: "Años en la Industria" },
-      { value: "1.889", label: "Commits (Proyecto Lead)" },
+      { value: "3.000+", label: "Commits (Proyecto Lead)" },
       { value: "300K+", label: "Hectáreas Gestionadas" },
       { value: "20K", label: "Nodos IoT Desplegados" },
     ],
@@ -22,12 +22,12 @@ const content: SiteContent = {
       id: "wiseconn-setup",
       company: "Wiseconn",
       role: "Creador & Lead Developer — Plataforma Setup",
-      startDate: "2017",
-      periodLabel: "2017 – Presente",
+      startDate: "2017-03",
+      periodLabel: "Mar 2017 – Presente",
       description:
         "Herramienta interna para configurar parámetros de redes IoT, usada diariamente por 20-30 ingenieros de soporte en Chile, USA y México.",
       achievements: [
-        "Construí y mantengo toda la plataforma como único desarrollador (1.889 commits en 3 años)",
+        "Construí y mantengo toda la plataforma como único desarrollador (3.000+ commits en 8 años)",
         "Reemplacé la configuración manual dispositivo por dispositivo con un wizard guiado, reduciendo el tiempo de setup en 80%",
         "Arquitecté servicios backend con Node.js Lambda + SQS para operaciones asíncronas de dispositivos",
       ],

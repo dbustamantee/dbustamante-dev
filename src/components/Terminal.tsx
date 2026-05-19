@@ -26,7 +26,7 @@ const COMMANDS: Record<string, string[]> = {
     "Tooling:   Git, Docker, CI/CD, Spec-Driven AI Dev",
   ],
   experience: [
-    "2022–now  Creator & Lead — Setup Platform (1,889 commits)",
+    "2017–now  Creator & Lead — Setup Platform (3,000+ commits)",
     "2023–now  Core Contributor — CAT (serverless admin tool)",
     "2025      Contributor — PumaServer (IoT protocol)",
     "2017–now  Lead — App Instalador (field tech app)",
