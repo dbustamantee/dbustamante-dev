@@ -43,7 +43,7 @@ export function IoTPing() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-border bg-[#0d1117] shadow-xl">
+    <div className="overflow-hidden rounded-lg border border-border bg-[#0d1117] shadow-xl">
       <div className="border-b border-white/10 px-4 py-2">
         <span className="text-xs font-medium text-gray-400">IoT Network — Live Ping Simulation</span>
       </div>

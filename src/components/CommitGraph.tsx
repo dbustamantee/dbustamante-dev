@@ -45,7 +45,7 @@ export function CommitGraph() {
   if (!data) return null;
 
   return (
-    <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-border bg-[#0d1117] p-4 shadow-xl">
+    <div className="overflow-hidden rounded-lg border border-border bg-[#0d1117] p-4 shadow-xl">
       <div className="mb-3 flex items-center justify-between">
         <span className="text-xs font-medium text-gray-400">
           Setup Platform — 1,889 contributions
@@ -58,18 +58,20 @@ export function CommitGraph() {
           <span>More</span>
         </div>
       </div>
-      <div className="flex gap-[3px]">
-        {data.map((week, wi) => (
-          <div key={wi} className="flex flex-col gap-[3px]">
-            {week.map((level, di) => (
-              <span
-                key={di}
-                className={`block h-[10px] w-[10px] rounded-sm transition-all duration-500 ${COLORS[level]} ${animated ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
-                style={{ transitionDelay: `${(wi * 7 + di) * 2}ms` }}
-              />
-            ))}
-          </div>
-        ))}
+      <div className="overflow-x-auto">
+        <div className="flex gap-[2px]">
+          {data.map((week, wi) => (
+            <div key={wi} className="flex flex-col gap-[2px]">
+              {week.map((level, di) => (
+                <span
+                  key={di}
+                  className={`block h-[9px] w-[9px] rounded-sm transition-all duration-500 ${COLORS[level]} ${animated ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}
+                  style={{ transitionDelay: `${(wi * 7 + di) * 2}ms` }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
