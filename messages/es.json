@@ -13,7 +13,8 @@
   "hero": {
     "headline": "Diego Bustamante",
     "subheadline": "10 años construyendo plataformas IoT en AWS — de 20K dispositivos de campo a serverless a escala",
-    "cta": "Contactar"
+    "cta": "Contactar",
+    "cv": "Descargar CV"
   },
   "about": {
     "title": "Sobre mí",

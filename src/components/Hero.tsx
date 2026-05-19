@@ -26,6 +26,13 @@ export function Hero({ profile }: { profile: Profile }) {
             {t("cta")}
           </a>
           <a
+            href="cv"
+            target="_blank"
+            className="inline-flex min-h-[48px] items-center rounded-full border-2 border-border px-8 py-3 text-sm font-semibold text-ink transition-all hover:border-accent-blue hover:text-accent-blue"
+          >
+            {t("cv")} ↓
+          </a>
+          <a
             href={profile.contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
