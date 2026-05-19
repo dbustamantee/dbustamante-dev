@@ -19,18 +19,16 @@ export default function CVPage({
 
   return (
     <>
-      <div className="cv-container mx-auto grid h-[297mm] w-[210mm] grid-cols-[68mm_142mm] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl">
+      <div className="cv-container mx-auto grid min-h-[297mm] w-[210mm] grid-cols-[65mm_1fr] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl">
         {/* Sidebar */}
-        <aside className="flex w-[68mm] flex-col bg-[#1e293b] px-5 py-6 text-white">
+        <aside className="flex flex-col bg-[#1e293b] px-5 py-6 text-white">
           {/* Photo */}
           <div className="mb-4 flex justify-center">
-            <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border-2 border-white/20">
-              <img
-                src="/diego-bustamante.png"
-                alt={content.profile.name}
-                className="h-full w-full object-cover object-[center_5px]"
-              />
-            </div>
+            <img
+              src="/diego-bustamante.png"
+              alt={content.profile.name}
+              className="h-24 w-24 object-cover object-[center_-5px] [clip-path:circle(50%)] shadow-[0_0_0_2px_rgba(255,255,255,0.2)]"
+            />
           </div>
 
           {/* Name */}
@@ -69,7 +67,7 @@ export default function CVPage({
           </div>
 
           {/* Education */}
-          <div className="mt-auto space-y-2 border-t border-white/10 pt-4">
+          <div className="mt-5 space-y-2 border-t border-white/10 pt-4">
             <h2 className="mb-2 text-[8px] font-bold uppercase tracking-widest text-blue-300">
               {locale === "es" ? "Educación" : "Education"}
             </h2>
@@ -84,7 +82,7 @@ export default function CVPage({
         </aside>
 
         {/* Main content */}
-        <main className="overflow-hidden px-6 py-6">
+        <main className="overflow-hidden px-6 py-8">
           {/* Summary */}
           <section className="mb-4 pb-3">
             <h2 className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
@@ -155,7 +153,7 @@ export default function CVPage({
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
           html, body { margin: 0; padding: 0; }
           .no-print { display: none !important; }
-          .cv-container { width: 210mm !important; height: 297mm !important; box-shadow: none !important; display: grid !important; grid-template-columns: 68mm 142mm !important; }
+          .cv-container { margin: 0 !important; width: 210mm !important; min-height: 297mm !important; box-shadow: none !important; display: grid !important; grid-template-columns: 65mm 1fr !important; }
           .cv-container img { visibility: visible !important; display: block !important; }
         }
         @media screen {
