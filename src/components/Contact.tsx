@@ -40,12 +40,13 @@ export function Contact({ contact }: { contact: ContactLinks }) {
           </a>
         )}
       </div>
-      <button
-        onClick={() => window.print()}
-        className="no-print mt-6 text-sm text-ink-muted underline-offset-4 hover:text-ink hover:underline"
+      <a
+        href="cv"
+        target="_blank"
+        className="no-print mt-6 inline-block text-sm text-ink-muted underline-offset-4 hover:text-ink hover:underline"
       >
         {t("print")}
-      </button>
+      </a>
     </section>
   );
 }
