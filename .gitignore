@@ -45,3 +45,7 @@ next-env.d.ts
 !public/**/*.png
 !src/**/*.png
 conversation.json
+
+# Sensitive docs
+METRICS.md
+EXPERIENCE.md
