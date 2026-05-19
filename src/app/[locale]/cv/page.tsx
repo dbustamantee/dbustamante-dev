@@ -19,16 +19,18 @@ export default function CVPage({
 
   return (
     <>
-      <div className="cv-container mx-auto grid min-h-[297mm] w-[210mm] grid-cols-[65mm_1fr] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl">
+      <div className="cv-container mx-auto grid min-h-[297mm] w-[210mm] grid-cols-[65mm_1fr] bg-white text-[11px] leading-[1.4] text-gray-800 shadow-2xl">
         {/* Sidebar */}
         <aside className="flex flex-col bg-[#1e293b] px-5 py-6 text-white">
           {/* Photo */}
           <div className="mb-4 flex justify-center">
-            <img
-              src="/diego-bustamante.png"
-              alt={content.profile.name}
-              className="h-24 w-24 object-cover object-[center_-5px] [clip-path:circle(50%)] shadow-[0_0_0_2px_rgba(255,255,255,0.2)]"
-            />
+            <div className="rounded-full border-[3px] border-white/30 p-[2px]">
+              <img
+                src="/diego-bustamante.png"
+                alt={content.profile.name}
+                className="h-24 w-24 rounded-full object-cover object-[center_-5px]"
+              />
+            </div>
           </div>
 
           {/* Name */}
@@ -97,7 +99,7 @@ export default function CVPage({
               {locale === "es" ? "Experiencia" : "Experience"}
             </h2>
             <div className="space-y-3">
-              {content.experience.slice(0, 4).map((item) => (
+              {content.experience.slice(0, 5).map((item) => (
                 <div key={item.id}>
                   <div className="flex items-baseline justify-between">
                     <h3 className="text-[9.5px] font-bold text-gray-800">{item.role}</h3>
@@ -151,10 +153,10 @@ export default function CVPage({
         @media print {
           @page { margin: 0; size: 210mm 297mm; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
-          html, body { margin: 0; padding: 0; }
+          html, body { margin: 0 !important; padding: 0 !important; width: 210mm; }
           .no-print { display: none !important; }
-          .cv-container { margin: 0 !important; width: 210mm !important; min-height: 297mm !important; box-shadow: none !important; display: grid !important; grid-template-columns: 65mm 1fr !important; }
-          .cv-container img { visibility: visible !important; display: block !important; }
+          .cv-container { margin: 0 !important; padding: 0 !important; width: 210mm !important; min-height: 297mm !important; box-shadow: none !important; border: none !important; display: grid !important; grid-template-columns: 65mm 1fr !important; }
+          .cv-container img { visibility: visible !important; display: block !important; border-radius: 50% !important; }
         }
         @media screen {
           body { background: #f1f5f9; padding: 2rem 0; }
