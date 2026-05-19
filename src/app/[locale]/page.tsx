@@ -38,7 +38,7 @@ export default async function HomePage({
             <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-ink-muted">
               {locale === "es" ? "En acción" : "In action"}
             </p>
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid items-start gap-6 lg:grid-cols-2">
               <CommitGraph />
               <IoTPing />
             </div>
