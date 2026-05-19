@@ -33,7 +33,7 @@ export default async function HomePage({
         <Experience items={content.experience} />
 
         {/* Evidence section — visual proof between Experience and Projects */}
-        <section className="border-y border-border bg-surface/50 py-16">
+        <section className="no-print border-y border-border bg-surface/50 py-16">
           <div className="mx-auto max-w-5xl px-6">
             <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-ink-muted">
               {locale === "es" ? "En acción" : "In action"}
@@ -49,7 +49,7 @@ export default async function HomePage({
         <Skills groups={content.skills} />
 
         {/* Terminal — between Skills and Education as a playful break */}
-        <section className="mx-auto max-w-5xl px-6 py-12">
+        <section className="no-print mx-auto max-w-5xl px-6 py-12">
           <p className="mb-4 text-center text-sm text-ink-muted">
             {locale === "es"
               ? "¿Prefieres la terminal? Prueba escribir un comando 👇"

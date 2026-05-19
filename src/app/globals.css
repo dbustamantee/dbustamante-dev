@@ -64,25 +64,71 @@ h3 {
   }
 
   body {
-    font-size: 11pt;
-    line-height: 1.4;
+    font-size: 9pt;
+    line-height: 1.3;
     color: #000;
     background: #fff;
   }
 
+  main {
+    padding: 0 !important;
+  }
+
+  section {
+    padding: 8px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    margin-bottom: 4px !important;
+  }
+
+  h3 {
+    font-size: 10pt !important;
+  }
+
+  /* Flatten grids for print */
+  .grid {
+    gap: 8px !important;
+  }
+
+  /* Remove decorative elements */
+  [class*="shadow"],
+  [class*="hover"] {
+    box-shadow: none !important;
+  }
+
+  [class*="border"] {
+    border-color: #e5e5e5 !important;
+  }
+
+  /* Hero compact */
+  #main-content > section:first-of-type {
+    min-height: auto !important;
+    padding: 12px 0 !important;
+  }
+
+  /* Hide profile image in print */
+  img[alt] {
+    display: none !important;
+  }
+
   a[href]::after {
     content: " (" attr(href) ")";
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: #555;
   }
 
   a[href^="#"]::after,
-  a[href^="javascript"]::after {
+  a[href^="javascript"]::after,
+  a[href^="mailto"]::after {
     content: "";
   }
 
-  section {
-    page-break-inside: avoid;
+  @page {
+    margin: 1cm;
+    size: A4;
   }
 }
 
