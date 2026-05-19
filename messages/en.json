@@ -16,7 +16,10 @@
     "cta": "Get in touch"
   },
   "about": {
-    "title": "About"
+    "title": "About",
+    "highlight1": "IoT platforms serving 20,000+ devices across 7 countries",
+    "highlight2": "Serverless-first on AWS — Lambda, CDK, SQS, DynamoDB",
+    "highlight3": "Legacy monolith → cloud-native migration specialist"
   },
   "experience": {
     "title": "Experience"
