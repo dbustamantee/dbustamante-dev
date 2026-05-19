@@ -19,7 +19,7 @@ export default function CVPage({
 
   return (
     <>
-      <div className="cv-container mx-auto flex min-h-[297mm] w-[210mm] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl print:shadow-none">
+      <div className="cv-container mx-auto flex h-[297mm] w-[210mm] overflow-hidden bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl print:shadow-none">
         {/* Sidebar */}
         <aside className="flex w-[68mm] flex-col bg-[#1e293b] px-5 py-6 text-white">
           {/* Photo */}
@@ -27,7 +27,7 @@ export default function CVPage({
             <img
               src="/diego-bustamante.png"
               alt={content.profile.name}
-              className="h-24 w-24 rounded-full border-2 border-white/20 object-cover"
+              className="h-24 w-24 rounded-full border-2 border-white/20 object-cover object-[center_20%]"
             />
           </div>
 
@@ -150,9 +150,9 @@ export default function CVPage({
       <style>{`
         @media print {
           @page { margin: 0; size: A4; }
-          body { margin: 0; padding: 0; }
+          html, body { margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           .no-print { display: none !important; }
-          .cv-container { width: 100%; min-height: 100vh; }
+          .cv-container { width: 100%; min-height: 100vh; box-shadow: none; }
         }
         @media screen {
           body { background: #f1f5f9; padding: 2rem 0; }
