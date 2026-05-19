@@ -48,7 +48,7 @@ export function CommitGraph() {
     <div className="mx-auto max-w-2xl overflow-hidden rounded-lg border border-border bg-[#0d1117] p-4 shadow-xl">
       <div className="mb-3 flex items-center justify-between">
         <span className="text-xs font-medium text-gray-400">
-          1,889 contributions in the last year
+          Setup Platform — 1,889 contributions
         </span>
         <div className="flex items-center gap-1 text-[10px] text-gray-500">
           <span>Less</span>

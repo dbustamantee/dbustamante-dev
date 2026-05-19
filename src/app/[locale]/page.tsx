@@ -30,19 +30,34 @@ export default async function HomePage({
       <main id="main-content">
         <Hero profile={content.profile} />
         <About bio={content.profile.bio} stats={content.profile.stats} />
+        <Experience items={content.experience} />
 
-        {/* Interactive section */}
-        <section className="mx-auto max-w-5xl space-y-8 px-6 py-16">
-          <Terminal />
-          <div className="grid gap-8 md:grid-cols-2">
-            <CommitGraph />
-            <IoTPing />
+        {/* Evidence section — visual proof between Experience and Projects */}
+        <section className="border-y border-border bg-surface/50 py-16">
+          <div className="mx-auto max-w-5xl px-6">
+            <p className="mb-8 text-center text-sm font-medium uppercase tracking-widest text-ink-muted">
+              {locale === "es" ? "En acción" : "In action"}
+            </p>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <CommitGraph />
+              <IoTPing />
+            </div>
           </div>
         </section>
 
-        <Experience items={content.experience} />
         <Projects items={content.projects} />
         <Skills groups={content.skills} />
+
+        {/* Terminal — between Skills and Education as a playful break */}
+        <section className="mx-auto max-w-5xl px-6 py-12">
+          <p className="mb-4 text-center text-sm text-ink-muted">
+            {locale === "es"
+              ? "¿Prefieres la terminal? Prueba escribir un comando 👇"
+              : "Prefer the terminal? Try typing a command 👇"}
+          </p>
+          <Terminal />
+        </section>
+
         <Education items={content.education} />
         <Contact contact={content.profile.contact} />
       </main>
