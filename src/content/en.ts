@@ -11,10 +11,10 @@ const content: SiteContent = {
       github: "https://github.com/dbustamantee",
     },
     stats: [
-      { value: "10+", label: "Years Experience" },
-      { value: "50+", label: "Projects Delivered" },
-      { value: "15+", label: "Technologies" },
-      { value: "3", label: "Countries Served" },
+      { value: "10+", label: "Years in Industry" },
+      { value: "1,889", label: "Commits (Lead Project)" },
+      { value: "300K+", label: "Hectares Managed" },
+      { value: "20K", label: "IoT Nodes Deployed" },
     ],
   },
   experience: [
@@ -25,11 +25,11 @@ const content: SiteContent = {
       startDate: "2022-03",
       periodLabel: "Mar 2022 – Present",
       description:
-        "Internal tool for configuring IoT network parameters, used daily by 20-30 support engineers across multiple countries.",
+        "Internal tool for configuring IoT network parameters, used daily by 20-30 support engineers across Chile, USA, and Mexico.",
       achievements: [
-        "Built and maintained the entire platform as sole developer (1,800+ commits over 3 years)",
-        "Replaced manual one-by-one device configuration with a guided wizard, drastically reducing setup time",
-        "Implemented significant performance optimizations for fast loading of large device networks",
+        "Built and maintained the entire platform as sole developer (1,889 commits over 3 years)",
+        "Replaced manual one-by-one device configuration with a guided wizard, reducing setup time by 80%",
+        "Architected backend services with Node.js Lambda + SQS for async device operations",
       ],
     },
     {
@@ -42,8 +42,22 @@ const content: SiteContent = {
         "Modern replacement for legacy admin system. Serverless architecture with ~25 Lambda functions, React SPA, and CDK infrastructure.",
       achievements: [
         "Implemented full-stack features across React frontend and Node.js Lambda backend with CDK",
-        "Contributed to IoT issue detection subsystem (temperature, battery, irrigation monitoring)",
+        "Built IoT issue detection subsystem (temperature, battery, irrigation anomaly monitoring)",
         "Replaced slow, unreliable legacy admin views with a fast, unified interface",
+      ],
+    },
+    {
+      id: "wiseconn-puma",
+      company: "Wiseconn",
+      role: "Contributor — PumaServer (IoT Protocol Module)",
+      startDate: "2025-08",
+      endDate: "2025-10",
+      periodLabel: "Aug – Oct 2025",
+      description:
+        "Core IoT communication module handling protocol-level interactions with 20,000+ field devices.",
+      achievements: [
+        "Worked on low-level IoT protocol for device communication (radio detection, sync, flow meters)",
+        "Integrated with DynamoDB for real-time device state management",
       ],
     },
     {
@@ -53,7 +67,7 @@ const content: SiteContent = {
       startDate: "2017",
       periodLabel: "2017 – Present",
       description:
-        "Field installation app for IoT devices used by all field technicians. Java/WildFly with responsive web view.",
+        "Field installation app for IoT devices used by all field technicians across 7 countries.",
       achievements: [
         "Led development and maintenance for 9+ years, supporting all field installation operations",
         "Designed workflows that guide technicians through complex IoT device installation procedures",
@@ -69,9 +83,8 @@ const content: SiteContent = {
       description:
         "IoT agriculture platform managing 300K+ hectares across 7 countries with 3,000+ active users and 20,000 field devices.",
       achievements: [
-        "Contributed to legacy Java platform and participated in migration to Next.js",
+        "Contributed to legacy Java platform (Struts2, EJB, Hibernate) and participated in migration to Next.js",
         "Implemented weather view and automated file download system with Puppeteer",
-        "Worked on IoT communication protocol for field devices (radio detection, sync, flow meters)",
         "Built data migration pipelines and Excel automation with Lambda",
       ],
     },
@@ -83,7 +96,7 @@ const content: SiteContent = {
       problem:
         "Speech therapists relied on outdated desktop software for statistical calculations and test evaluations.",
       solution:
-        "Built a modern web app that automates phonoaudiological test scoring with real-time calculations and bilingual support.",
+        "Modern web app that automates phonoaudiological test scoring with real-time calculations and bilingual support.",
       result: "Active tool used by speech therapists, replacing legacy desktop software",
       stack: ["React", "Vite", "TypeScript", "PrimeReact", "i18next"],
       role: "Solo developer",
@@ -96,7 +109,7 @@ const content: SiteContent = {
       problem:
         "Needed a simple, bilingual personal finance tracker without the complexity of existing apps.",
       solution:
-        "Built a Next.js app with i18n support, clean UI, and PostgreSQL backend with business logic in PLpgSQL.",
+        "Next.js app with i18n support, clean UI, and PostgreSQL backend with business logic in PLpgSQL.",
       result: "Personal use, actively maintained",
       stack: ["Next.js", "TypeScript", "Tailwind", "PostgreSQL", "next-intl"],
       role: "Solo developer",
@@ -106,9 +119,9 @@ const content: SiteContent = {
       name: "dbustamante.dev",
       problem: "No public professional presence beyond LinkedIn.",
       solution:
-        "Static bilingual portfolio optimized for recruiters: fast, accessible, printable, SEO-ready.",
-      result: "This site",
-      stack: ["Next.js", "TypeScript", "Tailwind", "next-intl", "Vercel"],
+        "Static bilingual portfolio optimized for recruiters: fast, accessible, SEO-ready. Built with spec-driven AI development.",
+      result: "This site — built in days, not weeks",
+      stack: ["Next.js 16", "TypeScript", "Tailwind 4", "next-intl", "Vercel"],
       role: "Solo developer",
       url: "https://dbustamante.dev",
       repo: "https://github.com/dbustamantee/dbustamante-dev",
@@ -131,9 +144,14 @@ const content: SiteContent = {
       items: ["AWS Lambda", "API Gateway", "ECS", "EC2", "S3", "CDK", "Cognito", "SQS", "Aurora"],
     },
     {
+      id: "iot",
+      category: "IoT & Protocols",
+      items: ["Device Communication", "Radio Detection", "Flow Meters", "DynamoDB", "MQTT", "Field Networks"],
+    },
+    {
       id: "tooling",
       category: "Tooling & Practices",
-      items: ["Git", "CI/CD", "Docker", "WildFly", "Serverless", "IoT Protocols"],
+      items: ["Git", "CI/CD", "Docker", "Serverless", "Spec-Driven AI Dev (Kiro, Codex)"],
     },
   ],
   education: [
