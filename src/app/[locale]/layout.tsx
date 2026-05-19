@@ -5,6 +5,7 @@ import { hasLocale } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Fraunces, IBM_Plex_Sans } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
@@ -82,7 +83,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${fraunces.variable} ${ibmPlexSans.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `
+        <Script id="theme-init" strategy="beforeInteractive">{`
           (function() {
             var stored = localStorage.getItem('theme');
             var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -90,7 +91,7 @@ export default async function LocaleLayout({
               document.documentElement.classList.add('dark');
             }
           })();
-        `}} />
+        `}</Script>
       </head>
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
