@@ -13,8 +13,8 @@ const content: SiteContent = {
     stats: [
       { value: "10+", label: "Años en la Industria" },
       { value: "3.000+", label: "Commits (Proyecto Lead)" },
-      { value: "300K+", label: "Hectáreas Gestionadas" },
-      { value: "20K", label: "Nodos IoT Desplegados" },
+      { value: "9.000+", label: "Campos IoT Configurados" },
+      { value: "28", label: "Países Atendidos" },
     ],
   },
   experience: [
@@ -25,11 +25,11 @@ const content: SiteContent = {
       startDate: "2017-03",
       periodLabel: "Mar 2017 – Presente",
       description:
-        "Herramienta interna para configurar parámetros de redes IoT, usada diariamente por 20-30 ingenieros de soporte en Chile, USA y México.",
+        "Herramienta interna para configurar redes IoT de campos, usada diariamente por 20-30 ingenieros de soporte. 9.000+ campos configurados en 28 países.",
       achievements: [
         "Construí y mantengo toda la plataforma como único desarrollador (3.000+ commits en 8 años)",
-        "Reemplacé la configuración manual dispositivo por dispositivo con un wizard guiado, reduciendo el tiempo de setup en 80%",
-        "Arquitecté servicios backend con Node.js Lambda + SQS para operaciones asíncronas de dispositivos",
+        "Reduje el tiempo de configuración de campos de días a horas (85% de reducción) reemplazando ingreso manual con wizards guiados",
+        "Optimicé tiempos de carga en 95% (minutos → segundos) refactorizando el sistema de permisos",
       ],
     },
     {
@@ -66,10 +66,10 @@ const content: SiteContent = {
       startDate: "2017",
       periodLabel: "2017 – Presente",
       description:
-        "App de instalación de dispositivos IoT en terreno usada por todos los técnicos de campo en 7 países.",
+        "App de instalación de dispositivos IoT en terreno usada por 800+ técnicos. Reemplazó configuración manual serial/radio con flujos guiados móviles.",
       achievements: [
-        "Lideré el desarrollo y mantenimiento por 9+ años, soportando todas las operaciones de instalación en terreno",
-        "Diseñé flujos que guían a los técnicos a través de procedimientos complejos de instalación IoT",
+        "Lideré el desarrollo y mantenimiento por 8+ años como único desarrollador",
+        "Diseñé flujos paso a paso que guían a los técnicos a través de procedimientos complejos de instalación IoT",
       ],
     },
     {
@@ -80,7 +80,7 @@ const content: SiteContent = {
       endDate: "2022",
       periodLabel: "2016 – 2022",
       description:
-        "Plataforma IoT de agricultura gestionando 300K+ hectáreas en 7 países con 3.000+ usuarios activos y 20.000 dispositivos de campo.",
+        "Contribuí a plataforma IoT de agricultura gestionando 300K+ hectáreas en 7 países con 3.000+ usuarios activos y 20.000 dispositivos de campo.",
       achievements: [
         "Contribuí a la plataforma legacy Java (Struts2, EJB, Hibernate) y participé en la migración a Next.js",
         "Implementé vista de clima y sistema automatizado de descarga de archivos con Puppeteer",

@@ -13,8 +13,8 @@ const content: SiteContent = {
     stats: [
       { value: "10+", label: "Years in Industry" },
       { value: "3,000+", label: "Commits (Lead Project)" },
-      { value: "300K+", label: "Hectares Managed" },
-      { value: "20K", label: "IoT Nodes Deployed" },
+      { value: "9,000+", label: "IoT Farms Configured" },
+      { value: "28", label: "Countries Served" },
     ],
   },
   experience: [
@@ -25,11 +25,11 @@ const content: SiteContent = {
       startDate: "2017-03",
       periodLabel: "Mar 2017 – Present",
       description:
-        "Internal tool for configuring IoT network parameters, used daily by 20-30 support engineers across Chile, USA, and Mexico.",
+        "Internal tool for configuring IoT farm networks, used daily by 20-30 support engineers. 9,000+ farms configured across 28 countries.",
       achievements: [
         "Built and maintained the entire platform as sole developer (3,000+ commits over 8 years)",
-        "Replaced manual one-by-one device configuration with a guided wizard, reducing setup time by 80%",
-        "Architected backend services with Node.js Lambda + SQS for async device operations",
+        "Reduced farm setup time from days to hours (85% reduction) by replacing manual data entry with guided wizards",
+        "Optimized page load times by 95% (minutes → seconds) by refactoring the permission system",
       ],
     },
     {
@@ -66,10 +66,10 @@ const content: SiteContent = {
       startDate: "2017",
       periodLabel: "2017 – Present",
       description:
-        "Field installation app for IoT devices used by all field technicians across 7 countries.",
+        "Field installation app for IoT devices used by 800+ technicians. Replaced manual serial/radio configuration with guided mobile workflows.",
       achievements: [
-        "Led development and maintenance for 9+ years, supporting all field installation operations",
-        "Designed workflows that guide technicians through complex IoT device installation procedures",
+        "Led development and maintenance for 8+ years as sole developer",
+        "Designed step-by-step workflows that guide technicians through complex IoT device installation procedures",
       ],
     },
     {
@@ -80,7 +80,7 @@ const content: SiteContent = {
       endDate: "2022",
       periodLabel: "2016 – 2022",
       description:
-        "IoT agriculture platform managing 300K+ hectares across 7 countries with 3,000+ active users and 20,000 field devices.",
+        "Contributed to IoT agriculture platform managing 300K+ hectares across 7 countries with 3,000+ active users and 20,000 field devices.",
       achievements: [
         "Contributed to legacy Java platform (Struts2, EJB, Hibernate) and participated in migration to Next.js",
         "Implemented weather view and automated file download system with Puppeteer",
