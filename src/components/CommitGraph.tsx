@@ -45,11 +45,11 @@ export function CommitGraph() {
   if (!data) return null;
 
   return (
-    <div className="overflow-hidden rounded-lg border border-border bg-[#0d1117] shadow-xl">
+    <div className="flex flex-col overflow-hidden rounded-lg border border-border bg-[#0d1117] shadow-xl">
       <div className="border-b border-white/10 px-4 py-2">
         <span className="text-xs font-medium text-gray-400">Setup Platform — 1,889 contributions</span>
       </div>
-      <div className="overflow-x-auto p-4">
+      <div className="flex flex-1 items-center overflow-x-auto p-4">
         <div className="flex gap-[2px]">
           {data.map((week, wi) => (
             <div key={wi} className="flex flex-col gap-[2px]">
