@@ -22,8 +22,8 @@ const content: SiteContent = {
       id: "wiseconn-setup",
       company: "Wiseconn",
       role: "Creator & Lead Developer — Setup Platform",
-      startDate: "2022-03",
-      periodLabel: "Mar 2022 – Present",
+      startDate: "2017",
+      periodLabel: "2017 – Present",
       description:
         "Internal tool for configuring IoT network parameters, used daily by 20-30 support engineers across Chile, USA, and Mexico.",
       achievements: [
