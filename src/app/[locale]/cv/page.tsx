@@ -19,16 +19,18 @@ export default function CVPage({
 
   return (
     <>
-      <div className="cv-container mx-auto flex h-[297mm] w-[210mm] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl print:h-auto print:w-full print:shadow-none">
+      <div className="cv-container mx-auto flex h-[297mm] w-[210mm] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl">
         {/* Sidebar */}
-        <aside className="flex w-[68mm] flex-col bg-[#1e293b] px-5 py-6 text-white">
+        <aside className="flex w-[68mm] shrink-0 flex-col bg-[#1e293b] px-5 py-6 text-white">
           {/* Photo */}
           <div className="mb-4 flex justify-center">
-            <img
-              src="/diego-bustamante.png"
-              alt={content.profile.name}
-              className="h-24 w-24 rounded-full border-2 border-white/20 object-cover object-[center_5px]"
-            />
+            <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border-2 border-white/20">
+              <img
+                src="/diego-bustamante.png"
+                alt={content.profile.name}
+                className="h-full w-full object-cover object-[center_5px]"
+              />
+            </div>
           </div>
 
           {/* Name */}
@@ -67,7 +69,7 @@ export default function CVPage({
           </div>
 
           {/* Education */}
-          <div className="mt-5 space-y-2 border-t border-white/10 pt-4">
+          <div className="mt-auto space-y-2 border-t border-white/10 pt-4">
             <h2 className="mb-2 text-[8px] font-bold uppercase tracking-widest text-blue-300">
               {locale === "es" ? "Educación" : "Education"}
             </h2>
@@ -82,9 +84,9 @@ export default function CVPage({
         </aside>
 
         {/* Main content */}
-        <main className="flex-1 px-6 py-6">
+        <main className="flex-1 overflow-hidden px-6 py-6">
           {/* Summary */}
-          <section className="mb-4 border-b border-gray-200 pb-3">
+          <section className="mb-4 pb-3">
             <h2 className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
               {locale === "es" ? "Perfil Profesional" : "Professional Summary"}
             </h2>
@@ -93,7 +95,7 @@ export default function CVPage({
 
           {/* Experience */}
           <section className="mb-4">
-            <h2 className="mb-2 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
+            <h2 className="mb-2 border-b border-gray-200 pb-1 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
               {locale === "es" ? "Experiencia" : "Experience"}
             </h2>
             <div className="space-y-3">
@@ -122,7 +124,7 @@ export default function CVPage({
 
           {/* Projects */}
           <section>
-            <h2 className="mb-2 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
+            <h2 className="mb-2 border-b border-gray-200 pb-1 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
               {locale === "es" ? "Proyectos Personales" : "Personal Projects"}
             </h2>
             <div className="space-y-1.5">
@@ -138,7 +140,7 @@ export default function CVPage({
       </div>
 
       {/* Print button */}
-      <div className="no-print mt-6 text-center print:hidden">
+      <div className="no-print mt-6 text-center">
         <button
           onClick={() => window.print()}
           className="rounded-lg bg-[#1e293b] px-6 py-3 text-sm font-medium text-white hover:bg-[#334155]"
@@ -150,11 +152,10 @@ export default function CVPage({
       <style>{`
         @media print {
           @page { margin: 0; size: A4; }
-          html, body { margin: 0; padding: 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+          * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+          html, body { margin: 0; padding: 0; }
           .no-print { display: none !important; }
-          .cv-container { width: 210mm; height: 297mm; }
-          .cv-container img { display: block !important; visibility: visible !important; }
-          .cv-container aside { -webkit-print-color-adjust: exact !important; }
+          .cv-container { width: 210mm; height: 297mm; box-shadow: none; }
         }
         @media screen {
           body { background: #f1f5f9; padding: 2rem 0; }
