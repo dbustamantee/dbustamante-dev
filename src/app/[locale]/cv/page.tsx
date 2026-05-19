@@ -19,9 +19,9 @@ export default function CVPage({
 
   return (
     <>
-      <div className="cv-container mx-auto flex h-[297mm] w-[210mm] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl">
+      <div className="cv-container mx-auto grid h-[297mm] w-[210mm] grid-cols-[68mm_142mm] bg-white text-[9px] leading-[1.35] text-gray-800 shadow-2xl">
         {/* Sidebar */}
-        <aside className="flex w-[68mm] shrink-0 flex-col bg-[#1e293b] px-5 py-6 text-white">
+        <aside className="flex w-[68mm] flex-col bg-[#1e293b] px-5 py-6 text-white">
           {/* Photo */}
           <div className="mb-4 flex justify-center">
             <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border-2 border-white/20">
@@ -84,7 +84,7 @@ export default function CVPage({
         </aside>
 
         {/* Main content */}
-        <main className="flex-1 overflow-hidden px-6 py-6">
+        <main className="overflow-hidden px-6 py-6">
           {/* Summary */}
           <section className="mb-4 pb-3">
             <h2 className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-[#1e293b]">
@@ -151,13 +151,11 @@ export default function CVPage({
 
       <style>{`
         @media print {
-          @page { margin: 0; size: A4; }
+          @page { margin: 0; size: 210mm 297mm; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
           html, body { margin: 0; padding: 0; }
           .no-print { display: none !important; }
-          .cv-container { width: 210mm !important; height: 297mm !important; box-shadow: none !important; display: flex !important; flex-direction: row !important; }
-          .cv-container aside { width: 68mm !important; min-width: 68mm !important; max-width: 68mm !important; }
-          .cv-container main { width: 142mm !important; min-width: 142mm !important; }
+          .cv-container { width: 210mm !important; height: 297mm !important; box-shadow: none !important; display: grid !important; grid-template-columns: 68mm 142mm !important; }
           .cv-container img { visibility: visible !important; display: block !important; }
         }
         @media screen {
