@@ -60,7 +60,7 @@ export function Terminal() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    bottomRef.current?.scrollIntoView({ block: "nearest" });
   }, [lines]);
 
   function handleSubmit() {
@@ -125,22 +125,22 @@ export function Terminal() {
       </div>
 
       {/* Terminal body */}
-      <div className="h-64 overflow-y-auto p-4">
+      <div className="h-80 overflow-y-auto p-5">
         {lines.map((line, i) => (
-          <div key={i} className="leading-relaxed">
+          <div key={i} className="py-0.5 leading-6">
             {line.type === "input" ? (
               <span>
                 <span className="text-green-400">❯ </span>
                 <span className="text-white">{line.text}</span>
               </span>
             ) : (
-              <span className="text-gray-300">{line.text}</span>
+              <span className="whitespace-pre text-gray-300">{line.text}</span>
             )}
           </div>
         ))}
 
         {/* Input line */}
-        <div className="flex items-center leading-relaxed">
+        <div className="flex items-center py-0.5 leading-6">
           <span className="text-green-400">❯ </span>
           <input
             ref={inputRef}
