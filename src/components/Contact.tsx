@@ -40,13 +40,6 @@ export function Contact({ contact }: { contact: ContactLinks }) {
           </a>
         )}
       </div>
-      <a
-        href="cv"
-        target="_blank"
-        className="no-print mt-6 inline-block text-sm text-ink-muted underline-offset-4 hover:text-ink hover:underline"
-      >
-        {t("print")}
-      </a>
     </section>
   );
 }
